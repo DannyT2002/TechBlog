@@ -1,0 +1,18 @@
+{{> header}}
+
+<main>
+  <section class="posts">
+    <h2>Recent Posts</h2>
+    <ul>
+      {{#each posts}}
+      <li>
+        <h3><a href="/post/{{this.id}}">{{this.title}}</a></h3>
+        <p>{{this.content}}</p>
+        <small>Posted by {{this.user.username}}</small>
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+</main>
+
+{{> footer}}
