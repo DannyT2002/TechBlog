@@ -12,6 +12,12 @@ Post.init(
       type: DataType.STRING,
       allowNull: false,
     },
+    user_id: {
+      references: {
+        key: "id",
+        model: "user",
+      },
+    },
   },
   {
     freezeTableName: false,
